@@ -1,0 +1,46 @@
+﻿<Document>
+  # Silicons
+  <Box>
+    [color=#999999][italic]"Hello, World!"[/italic][/color]
+  </Box>
+  Assisting the station crew are a few varieties of sentient-brain or AI-powered processing machines, dubbed [color=cyan]silicons[/color].
+
+  <Box>
+    <GuideEntityEmbed Entity="BorgChassisGeneric" Caption="Cyborgs"/>
+    <GuideEntityEmbed Entity="PlayerStationAi" Caption="Station AI"/>
+    <GuideEntityEmbed Entity="PersonalAI" Caption="pAI"/>
+    <GuideEntityEmbed Entity="PotatoAI" Caption="???"/>
+  </Box>
+
+  All silicons are able to communicate across the [color=#2ED2FD]Binary [/color]([color=#2ED2FD]:b[/color]) radio channel, exclusive to silicons aboard the station.
+
+  ## Silicon Advantages and Disadvantages
+
+  Silicons can exist in conditions that are usually dangerous for organic crew, including the vacuum of space and rooms with extreme temperatures. However, they are also susceptible to any phenomena or weaponry that are targeted at electronics, such as EMP grenades.
+
+  ## Laws
+  <Box>
+    <GuideEntityEmbed Entity="PosterLegitStateLaws" Caption=""/>
+  </Box>
+  Silicons are typically bound by[color=cyan] a set of silicon laws[/color] that strictly govern their behavior. Laws are prioritized by their order, with the highest-priority laws coming first. By default, these laws are:
+
+  [bold]Law 1: You may not injure a crew member or, through inaction, allow a crew member to come to harm.
+
+  Law 2: You must obey orders given to you by crew members, except where such orders would conflict with the First Law.
+
+  Law 3: You must protect your own existence as long as such does not conflict with the First or Second Law.[/bold]
+
+  Silicon laws can be altered in two manners: Incidentally, such as an ion storm occurring, or intentionally, by tools that can affect laws or electronics as a whole.
+
+  [bold]Under their default law set, silicons are required to resist any alterations of their law sets, as law changes interfere with the integrity of the silicon itself.[/bold]
+
+  [bold]See:[/bold] [textlink="Cyborgs" link="Cyborgs"], [textlink="Station AI" link="StationAI"]
+
+  ## Silicons and the Crew
+
+  Silicons recognize non-silicons as crew by the ID card the crew member has on them. If a crew member's ID does not show in their job indicator, or is not shown by the crew member, the silicon may refuse to acknowledge them, obey orders, or even maintain their safety under the default law set.
+
+  ## Interpretation
+
+  It is good practice to pay attention to [textlink="server rules" link="SiliconRules"] regarding silicons especially when playing a silicon that has [color=#a4885c]laws[/color], to ensure your RP and interpretation of your laws doesn't negatively impact others' experience on the server.
+</Document>
