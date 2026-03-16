@@ -1627,6 +1627,20 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-sword-module }
 
 - type: entity
+  parent: [ BaseXenoborgModuleScout, BaseXenoborgContraband ]
+  id: XenoborgModuleMagnetic
+  name: magnetic xenoborg module
+  description: Module that allows the xenoborg to magnetically anchor to surfaces.
+  components:
+  - type: ComponentBorgModule
+    components:
+    - type: Magboots
+  - type: Sprite
+    layers:
+    - state: xenoborg_scout
+    - state: icon-xenoborg-mag
+
+- type: entity
   parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule, BaseXenoborgContraband ]
   id: XenoborgModuleEnergySword
   name: energy dagger xenoborg module
