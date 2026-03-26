@@ -66,6 +66,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         SubscribeLocalEvent<StaminaComponent, RejuvenateEvent>(OnRejuvenate);
 
         SubscribeLocalEvent<StaminaDamageOnEmbedComponent, EmbedEvent>(OnProjectileEmbed);
+        SubscribeLocalEvent<StaminaDrainOnEmbedComponent, EmbedEvent>(OnProjectileEmbedDrain);
 
         SubscribeLocalEvent<StaminaDamageOnCollideComponent, ProjectileHitEvent>(OnProjectileHit);
         SubscribeLocalEvent<StaminaDamageOnCollideComponent, ThrowDoHitEvent>(OnThrowHit);
@@ -205,6 +206,15 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         TakeStaminaDamage(args.Embedded, component.Damage, stamina, source: uid);
     }
 
+    private void OnProjectileEmbedDrain(Entity<StaminaDrainOnEmbedComponent> ent, ref EmbedEvent args)
+    {
+        if (!TryComp<StaminaComponent>(args.Embedded, out var stamina))
+            return;
+
+        DrainMaxStamina(args.Embedded, ent.Comp.MaxDrain);
+
+    }
+
     private void OnThrowHit(EntityUid uid, StaminaDamageOnCollideComponent component, ThrowDoHitEvent args)
     {
         OnCollide(uid, component, args.Target);
@@ -259,6 +269,19 @@ public abstract partial class SharedStaminaSystem : EntitySystem
 
         TakeStaminaDamage(uid, value, component, source, with, visual: visual);
         return true;
+    }
+
+    public void DrainMaxStamina(Entity<StaminaComponent> ent, StaminaDrainOnEmbedComponent component)
+    {
+
+        var threshold = ent.Comp.CritThreshold;
+
+        var newThreshold = threshold - component.MaxDrain;
+
+        var ev = new RefreshStaminaCritThresholdEvent(newThreshold);
+
+        RaiseLocalEvent(ent, ref ev);
+
     }
 
     public void TakeStaminaDamage(EntityUid uid, float value, StaminaComponent? component = null,
