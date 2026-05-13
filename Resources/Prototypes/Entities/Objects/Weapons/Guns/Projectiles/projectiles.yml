@@ -1134,6 +1134,32 @@
     muzzleFlash: null
 
 - type: entity
+  parent: StickyHandPalm
+  id: SpringBoxingGlove
+  name: spring-loaded boxing glove
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/boxing_glove_gun.rsi
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      path: /Audio/Weapons/punch1.ogg
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.10,-0.30,0.10,0.15"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+
+- type: entity
   name : disabler bolt smg
   id: BulletDisablerSmg
   parent: BaseBullet

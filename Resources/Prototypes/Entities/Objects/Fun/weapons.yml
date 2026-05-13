@@ -158,6 +158,24 @@
   - type: UseDelay
     delay: 1.5
 
+- type: entity
+  parent: WeaponStickyHand
+  id: BoxingGloveGun
+  name: boxing glove gun
+  description: Play a little chin music from a distance.
+  components:
+  - type: GrapplingGun
+    cycleSound: /Audio/Misc/woosh.ogg
+    ropeSprite:
+      sprite: Objects/Weapons/Guns/Launchers/boxing_glove_gun.rsi
+      state: rope
+  - type: BasicEntityAmmoProvider
+    proto: SpringBoxingGlove
+    capacity: 1
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/boxing_glove_gun.rsi
+    state: base
+
 ## Toy swords
 
 - type: entity
